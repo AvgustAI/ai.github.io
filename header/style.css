@@ -1,0 +1,105 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили шапки */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111;
+    padding: 15px 50px;
+    color: white;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo h1 {
+    margin-left: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Анимация рассыпания */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.5) translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Применение анимации */
+.logo:hover img,
+.logo:hover h1 {
+    animation: explode 1.5s ease-in-out;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Меню */
+.menu {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu:hover {
+    color: orange;
+}
+
+/* Подменю */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+/* Элементы подменю */
+.submenu a {
+    display: block;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background: orange;
+}
