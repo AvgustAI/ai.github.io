@@ -1,16 +1,36 @@
-// script.js
-const logo = document.getElementById('logo');
-const logoImg = document.getElementById('logo-img');
-const logoText = document.getElementById('logo-text');
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.getElementById('logo');
+    const pieces = [];
 
-logo.addEventListener('mouseenter', () => {
-    // Добавляем класс для анимации
-    logoImg.classList.add('explode');
-    logoText.classList.add('explode');
+    // Создаем 4 кусочка
+    for (let i = 1; i <= 4; i++) {
+        const piece = document.createElement('div');
+        piece.classList.add('piece');
+        piece.id = `piece${i}`;
+        pieces.push(piece);
+        logo.appendChild(piece);
+    }
 
-    // Убираем класс после завершения анимации
-    setTimeout(() => {
-        logoImg.classList.remove('explode');
-        logoText.classList.remove('explode');
-    }, 1500); // Время анимации (1.5 секунды)
+    function scatter() {
+        pieces.forEach(piece => {
+            piece.style.transform = `translate(${getRandomInt(-200, 200)}px, ${getRandomInt(-200, 200)}px)`;
+            piece.style.opacity = '0';
+        });
+    }
+
+    function gather() {
+        pieces.forEach(piece => {
+            piece.style.transform = 'translate(0, 0)';
+            piece.style.opacity = '1';
+        });
+    }
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    setInterval(() => {
+        scatter();
+        setTimeout(gather, 1000);
+    }, 3000);
 });
