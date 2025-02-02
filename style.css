@@ -1,123 +1,135 @@
 :root {
-    --darkgreen: #005361;
-    --white: #fff;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body,
-  .tabs-to-dropdown .dropdown-toggle,
-  .tabs-to-dropdown .dropdown-item {
-    font-size: 1.3rem;
-  }
-  
+  --darkgreen: #005361;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+.tabs-to-dropdown .dropdown-toggle,
+.tabs-to-dropdown .dropdown-item {
+  font-size: 1.3rem;
+}
+
+.tabs-to-dropdown .nav-wrapper {
+  padding: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.tabs-to-dropdown .nav-wrapper a {
+  color: var(--darkgreen);
+}
+
+.tabs-to-dropdown .nav-pills .nav-link.active {
+  background-color: var(--darkgreen);
+}
+
+.tabs-to-dropdown .nav-pills li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.tabs-to-dropdown .tab-content .container-fluid {
+  max-width: 1250px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.tabs-to-dropdown .dropdown-menu {
+  border: none;
+  box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+.tabs-to-dropdown .dropdown-item {
+  padding: 14px 28px;
+}
+
+.tabs-to-dropdown .dropdown-item:active {
+  color: var(--white);
+}
+
+@media (min-width: 1280px) {
   .tabs-to-dropdown .nav-wrapper {
-    padding: 15px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+    padding: 15px 30px;
   }
-  
-  .tabs-to-dropdown .nav-wrapper a {
-    color: var(--darkgreen);
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 5px;
+  background: var(--white);
+}
+
+.page-footer a {
+  margin-left: 4px;
+}
+.Loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 14.6rem;
+  margin-top: 7.3rem;
+  margin-bottom: 7.3rem;
+}
+
+.Loader:before,
+.Loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.75));
+}
+
+.Loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1.7rem #fff;
+  animation-name: pulsA;
+}
+
+.Loader:after {
+  width: calc(100% - 3.4rem);
+  padding-bottom: calc(100% - 3.4rem);
+  box-shadow: 0 0 0 0 #fff;
+  animation-name: pulsB;
+}
+
+@keyframes pulsA {
+  0% {
+    box-shadow: inset 0 0 0 1.7rem #fff;
+    opacity: 1;
   }
-  
-  .tabs-to-dropdown .nav-pills .nav-link.active {
-    background-color: var(--darkgreen);
+  50%,
+  100% {
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 0;
   }
-  
-  .tabs-to-dropdown .nav-pills li:not(:last-child) {
-    margin-right: 30px;
+}
+
+@keyframes pulsB {
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 #fff;
+    opacity: 0;
   }
-  
-  .tabs-to-dropdown .tab-content .container-fluid {
-    max-width: 1250px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+  100% {
+    box-shadow: 0 0 0 1.7rem #fff;
+    opacity: 1;
   }
-  
-  .tabs-to-dropdown .dropdown-menu {
-    border: none;
-    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);
-  }
-  
-  .tabs-to-dropdown .dropdown-item {
-    padding: 14px 28px;
-  }
-  
-  .tabs-to-dropdown .dropdown-item:active {
-    color: var(--white);
-  }
-  
-  @media (min-width: 1280px) {
-    .tabs-to-dropdown .nav-wrapper {
-      padding: 15px 30px;
-    }
-  }
-  
-  
-  /* FOOTER STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .page-footer {
-    position: fixed;
-    right: 15px;
-    bottom: 20px;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    padding: 5px;
-    background: var(--white);
-  }
-  
-  .page-footer a {
-    margin-left: 4px;
-  }
-  $Loader-color: #fff;
-  $Loader-size: 14.6rem;
-  $Loader-offset: 1.7rem;
-  $Loader-timing: ease-in-out;
-  
-  .Loader {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: $Loader-size;
-    margin-top: $Loader-size/2;
-    margin-bottom: $Loader-size/2;
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      animation-duration: 1.8s;
-      animation-iteration-count: infinite;
-      animation-timing-function: $Loader-timing;
-      filter: drop-shadow(0 0 $Loader-offset/2.25 rgba($Loader-color, 0.75));
-    }
-    &:before {
-      width: 100%;
-      padding-bottom: 100%;
-      box-shadow: inset 0 0 0 $Loader-offset $Loader-color;
-      animation-name: pulsA;
-    }
-    &:after {
-      width: calc(100% - #{$Loader-offset}*2);
-      padding-bottom: calc(100% - #{$Loader-offset}*2);
-      box-shadow: 0 0 0 0 $Loader-color;
-      animation-name: pulsB;
-    }
-  }
-  
-  @keyframes pulsA {
-    0% { box-shadow: inset 0 0 0 $Loader-offset $Loader-color; opacity: 1; }
-    50%, 100% { box-shadow: inset 0 0 0 0 $Loader-color; opacity: 0; }
-  }
-  
-  @keyframes pulsB {
-    0%, 50% { box-shadow: 0 0 0 0 $Loader-color; opacity: 0; }
-    100% { box-shadow: 0 0 0 $Loader-offset $Loader-color; opacity: 1; }
-  }  
+}
