@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Привет, мир!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+    <title>My Website</title>
+    <script>
+        // Функция для загрузки компонентов
+        function loadComponent(url, elementId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading component:', error));
         }
-        h1 {
-            font-size: 3em;
-            color: #333;
-        }
-    </style>
+
+        // Загружаем компоненты при загрузке страницы
+        window.onload = function() {
+            loadComponent('header.html', 'header');
+            loadComponent('body.html', 'body');
+            loadComponent('footer.html', 'footer');
+        };
+    </script>
 </head>
 <body>
-    <h1>Привет, мир!!</h1>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Body -->
+    <div id="body"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
 </body>
 </html>
