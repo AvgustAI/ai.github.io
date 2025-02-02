@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <script>
-        // Функция для загрузки компонентов
-        function loadComponent(url, elementId) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(elementId).innerHTML = data;
-                })
-                .catch(error => console.error('Error loading component:', error));
-        }
+   <!-- Кодировка страницы -->
+   <meta charset="UTF-8">
 
-        // Загружаем компоненты при загрузке страницы
-        window.onload = function() {
-            loadComponent('header.html', 'header');
-            loadComponent('body.html', 'body');
-            loadComponent('footer.html', 'footer');
-        };
-    </script>
-    <link rel="stylesheet" href="header/style.css">
+   <!-- Настройка для адаптивного дизайна (мобильные устройства) -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Мета-теги для SEO -->
+   <meta name="description" content="Chatbots Development">
+   <meta name="keywords" content="Ai, Chatbot, Development">
+   <meta name="author" content="Pavel Avgust">
+
+   <!-- Мета-теги для Open Graph (для соцсетей) -->
+   <meta property="og:title" content="AI Chatbots Development">
+   <meta property="og:description" content="Development of chatbots using artificial intelligence">
+   <meta property="og:image" content="header/pl-avg.webp">
+   <meta property="og:url" content="">
+
+   <!-- Совместимость с браузерами -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <!-- Подключение CSS  -->
+   <link rel="stylesheet" href="header/style.css">
+
+   <!-- Подключение шрифтов (если нужно) -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+   <!-- Иконка сайта -->
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+   <title>AI Chatbots</title>
+
+   <script>
+    // Функция для загрузки внешнего HTML-контента в элементы страницы
+    function loadContent() {
+       // Загрузка header.html
+       fetch('header.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('header-container').innerHTML = data)
+          .catch(error => console.error('Ошибка загрузки шапки:', error));
+
+       // Загрузка body.html
+       fetch('body.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('body-container').innerHTML = data)
+          .catch(error => console.error('Ошибка загрузки основного контента:', error));
+
+       // Загрузка footer.html
+       fetch('footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer-container').innerHTML = data)
+          .catch(error => console.error('Ошибка загрузки подвала:', error));
+    }
+
+    // Загрузка контента при загрузке страницы
+    window.onload = loadContent;
+ </script>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header"></div>
-
-    <!-- Body -->
-    <div id="body"></div>
-
-    <!-- Footer -->
-    <div id="footer"></div>
-
-    <script src="header/script.js"></script>
-</body>
+    <!-- Контейнеры для загрузки HTML-контента -->
+    <div id="header-container"></div> <!-- Здесь будет загружена шапка -->
+ 
+    <div id="body-container"></div> <!-- Здесь будет загружен основной контент -->
+ 
+    <div id="footer-container"></div> <!-- Здесь будет загружен подвал -->
+ </body>
 </html>

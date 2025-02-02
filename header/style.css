@@ -1,85 +1,123 @@
-/* Общие стили для шапки */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #212534;
-    color: white;
-}
-
-/* Стиль шапки */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 3rem;
-    position: relative;
-}
-
-/* Логотип в кружочке */
-.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Название сайта */
-h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: white;
-}
-
-/* Меню */
-nav ul {
-    list-style: none;
+:root {
+    --darkgreen: #005361;
+    --white: #fff;
+  }
+  
+  * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  .tabs-to-dropdown .dropdown-toggle,
+  .tabs-to-dropdown .dropdown-item {
+    font-size: 1.3rem;
+  }
+  
+  .tabs-to-dropdown .nav-wrapper {
+    padding: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.12);
+  }
+  
+  .tabs-to-dropdown .nav-wrapper a {
+    color: var(--darkgreen);
+  }
+  
+  .tabs-to-dropdown .nav-pills .nav-link.active {
+    background-color: var(--darkgreen);
+  }
+  
+  .tabs-to-dropdown .nav-pills li:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .tabs-to-dropdown .tab-content .container-fluid {
+    max-width: 1250px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  
+  .tabs-to-dropdown .dropdown-menu {
+    border: none;
+    box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.08);
+  }
+  
+  .tabs-to-dropdown .dropdown-item {
+    padding: 14px 28px;
+  }
+  
+  .tabs-to-dropdown .dropdown-item:active {
+    color: var(--white);
+  }
+  
+  @media (min-width: 1280px) {
+    .tabs-to-dropdown .nav-wrapper {
+      padding: 15px 30px;
+    }
+  }
+  
+  
+  /* FOOTER STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .page-footer {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
     display: flex;
-}
-
-.menu-item {
-    position: relative;
-    margin-left: 2rem;
-}
-
-.menu-item a {
-    color: white;
-    text-decoration: none;
+    align-items: center;
     font-size: 1rem;
-    padding: 0.5rem;
-    display: block;
-}
-
-/* Подменю */
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #333;
-    border-radius: 5px;
-    padding: 1rem;
-    list-style: none;
-}
-
-.submenu li {
-    margin: 0.5rem 0;
-}
-
-.menu-item:hover .submenu {
-    display: block;
-}
-
-/* Эффект распада логотипа */
-.logo:hover img {
-    transform: scale(1.2);
-}
+    padding: 5px;
+    background: var(--white);
+  }
+  
+  .page-footer a {
+    margin-left: 4px;
+  }
+  $Loader-color: #fff;
+  $Loader-size: 14.6rem;
+  $Loader-offset: 1.7rem;
+  $Loader-timing: ease-in-out;
+  
+  .Loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: $Loader-size;
+    margin-top: $Loader-size/2;
+    margin-bottom: $Loader-size/2;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      animation-duration: 1.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: $Loader-timing;
+      filter: drop-shadow(0 0 $Loader-offset/2.25 rgba($Loader-color, 0.75));
+    }
+    &:before {
+      width: 100%;
+      padding-bottom: 100%;
+      box-shadow: inset 0 0 0 $Loader-offset $Loader-color;
+      animation-name: pulsA;
+    }
+    &:after {
+      width: calc(100% - #{$Loader-offset}*2);
+      padding-bottom: calc(100% - #{$Loader-offset}*2);
+      box-shadow: 0 0 0 0 $Loader-color;
+      animation-name: pulsB;
+    }
+  }
+  
+  @keyframes pulsA {
+    0% { box-shadow: inset 0 0 0 $Loader-offset $Loader-color; opacity: 1; }
+    50%, 100% { box-shadow: inset 0 0 0 0 $Loader-color; opacity: 0; }
+  }
+  
+  @keyframes pulsB {
+    0%, 50% { box-shadow: 0 0 0 0 $Loader-color; opacity: 0; }
+    100% { box-shadow: 0 0 0 $Loader-offset $Loader-color; opacity: 1; }
+  }  
