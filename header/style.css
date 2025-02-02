@@ -1,37 +1,85 @@
+/* Общие стили для шапки */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background: #212534;
+    color: white;
 }
 
-.header {
-    text-align: center;
-}
-
-.logo {
+/* Стиль шапки */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
     position: relative;
-    display: inline-block;
 }
 
-#logo-img {
-    width: 200px;
-    height: 200px;
-    display: none; /* Скрываем оригинальный логотип */
+/* Логотип в кружочке */
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
 }
 
-.piece {
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Название сайта */
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+    margin-left: 2rem;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: block;
+}
+
+/* Подменю */
+.submenu {
+    display: none;
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: #61dafb;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    z-index: 1;
+    top: 100%;
+    left: 0;
+    background: #333;
+    border-radius: 5px;
+    padding: 1rem;
+    list-style: none;
 }
 
-#piece1 { top: 0; left: 0; }
-#piece2 { top: 0; right: 0; }
-#piece3 { bottom: 0; left: 0; }
-#piece4 { bottom: 0; right: 0; }
+.submenu li {
+    margin: 0.5rem 0;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+/* Эффект распада логотипа */
+.logo:hover img {
+    transform: scale(1.2);
+}
