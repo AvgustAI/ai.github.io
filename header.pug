@@ -1,0 +1,28 @@
+header
+  nav
+    #brand
+      #logo
+      #word-mark
+    #menu
+      #menu-toggle
+        #menu-icon
+          .bar
+          .bar
+          .bar
+      ul
+        - for(i = 0; i < 4; i++)
+          li
+            a(href='#section0' + i) Меню #{i + 1}  
+
+#hero-section
+  #head-line
+
+- for(i = 0; i < 4; i++)
+  section(id='section0' + i)
+    #heading
+
+a#youtube(
+  href="https://www.youtube.com/watch?v=m1IU7zjl1k4",
+  target="_blank",
+  rel="noopener noreferrer"
+): i.fa.fa-youtube-play
