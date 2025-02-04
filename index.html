@@ -1,99 +1,219 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avgust AI</title>
-    <link rel="stylesheet" href="style.scss">
+    <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <!-- Подключение JavaScript -->
-   <script src="script.js"></script>
-       <!-- Подключение jQuery -->
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-   <!-- Подключение jQuery -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="card.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <header><nav><div id="brand"><div id="logo"></div><div id="word-mark"></div></div><div id="menu"><div id="menu-toggle"><div id="menu-icon"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div><ul><li><a href="#section00">Меню 1  </a></li><li><a href="#section01">Меню 2  </a></li><li><a href="#section02">Меню 3  </a></li><li><a href="#section03">Меню 4  </a></li></ul></div></nav></header><div id="hero-section"><div id="head-line"></div></div><section id="section00"><div id="heading"></div></section><section id="section01"><div id="heading"></div></section><section id="section02"><div id="heading"></div></section><section id="section03"><div id="heading"></div></section><a id="youtube" href="https://www.youtube.com/watch?v=m1IU7zjl1k4" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
-    <div class="tabs-to-dropdown">
-        <div class="nav-wrapper d-flex align-items-center justify-content-between">
-          <ul class="nav nav-pills d-none d-md-flex" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <a class="nav-link active" id="pills-company-tab" data-toggle="pill" href="#pills-company" role="tab" aria-controls="pills-company" aria-selected="true">Compaааny</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-product-tab" data-toggle="pill" href="#pills-product" role="tab" aria-controls="pills-product" aria-selected="false">Product</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#pills-news" role="tab" aria-controls="pills-news" aria-selected="false">News</a>
-            </li>
-            <li class="nav-item" role="presentation">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-            </li>
-          </ul>
-      
-          <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">
-              <a href="">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z" fill="currentColor" />
-                </svg>
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a href="">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z" fill="currentColor" />
-                </svg>
-              </a>
-            </li>
-            <li class="list-group-item">
-              <a href="">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor" />
-                </svg>
-              </a>
-            </li>
-          </ul>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav-logo">Avgust</a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home bd-grid" id="home">
+            <div class="home-data">
+                <h1 class="home-title">Hi, <br>I'm <span class="home-title-color">Avgust</span><br> Web Designer</h1>
+                <a href="#" class="button">Contact</a>
+            </div>
+
+            <div class="home-social">
+                <a href="#" class="home-social-icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#" class="home-social-icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="home-social-icon"><i class='bx bxl-github' ></i></a>
+            </div>
+
+            <div class="home-img">
+                <img src="pl-avg.webp" alt="image">
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about-container bd-grid">
+                <div class="about-img">
+                    <img src="pl-avg.webp" alt="image">
+                </div>
+
+                <div>
+                    <h2 class="about-subtitle">I'm Marlon</h2>
+                    <p class="about-text">As a passionate web designer, I thrive on creating visually appealing and user-friendly websites. My journey in web design began with a fascination for how design can enhance user experience</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-container bd-grid">
+                <div>
+                    <h2 class="skills-subtitle">Professional Skills</h2>
+                    <p class="skills-text">I love to think outside the box and bring unique ideas to life through design, I have proficiency in HTML, CSS, and JavaScript, that ensure that my designs are not only beautiful but also functional. I prioritize the needs and preferences of users, conducting research to understand their behaviors and preferences.</p>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-html5 skills-icon' ></i>
+                            <span class="skills-name">HTML5</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">95%</span>
+                        </div>
+
+                        <div class="skills-bar skills-html"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-css3 skills-icon' ></i>
+                            <span class="skills-name">CSS3</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">85%</span>
+                        </div>
+
+                        <div class="skills-bar skills-css"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxl-javascript skills-icon' ></i>
+                            <span class="skills-name">JAVASCRIPT</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">65%</span>
+                        </div>
+
+                        <div class="skills-bar skills-js"></div>
+                    </div>
+
+                    <div class="skills-data">
+                        <div class="skills-names">
+                            <i class='bx bxs-paint skills-icon' ></i>
+                            <span class="skills-name">UX/UI</span>
+                        </div>
+
+                        <div>
+                            <span class="skills-percentage">85%</span>
+                        </div>
+
+                        <div class="skills-bar skills-ux"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://i.postimg.cc/52LWbPyt/work3.jpg" alt="image" class="skills-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="work section" id="work">
+            <h2 class="section-title">Work</h2>
+
+            <h1 class="title">Hover over the cards</h1>
+
+            <div id="app" class="container">
+              <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Canyons</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Beaches</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Trees</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Lakes</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+            <script src="card.js"></script>
+            
+            <div class="work-container bd-grid">
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/NM0n9bsm/work1.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/tJZmDTVg/work2.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/52LWbPyt/work3.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/fW1wsSCB/work4.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/m2MTgZ6R/work5.jpg" alt="image">
+                </div>
+
+                <div class="work-img">
+                    <img src="https://i.postimg.cc/Qd3h9LR7/work6.jpg" alt="image">
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-container bd-grid">
+                <form action="" class="contact-form">
+                    <input type="text" placeholder="Name" class="contact-input">
+                    <input type="email" placeholder="Email" class="contact-input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
+
+                    <input type="button" value="Send" class="contact-button button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-title">Avgust</p>
+
+        <div class="footer-social">
+            <a href="#" class="footer-icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-instagram' ></i></a>
+            <a href="#" class="footer-icon"><i class='bx bxl-twitter' ></i></a>
         </div>
-      
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-company" role="tabpanel" aria-labelledby="pills-company-tab">
-            <div class="container-fluid">
-              <h2 class="mb-3 font-weight-bold">Company</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor leo nec ligula viverra, quis facilisis nunc vehicula. Maecenas purus orci, efficitur in dapibus vel, rutrum in massa. Sed auctor urna sit amet eros mattis interdum. Integer imperdiet ante in quam lacinia, a laoreet risus imperdiet. Ut a blandit elit, vitae volutpat nunc. Nam posuere urna sagittis lectus eleifend viverra. Quisque mauris nunc, viverra vitae sodales non, auctor in diam. Sed dignissim pulvinar sapien sed fermentum. Praesent interdum turpis ut neque tristique ornare. Nam dictum est sed sem elementum rutrum. Nam a mollis turpis.</p>
-              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam tempus ac est convallis accumsan. Donec rhoncus condimentum leo nec cursus. Fusce a ornare nisl, id fermentum sem. Praesent pretium dui magna, in aliquam lectus tempor sed. Donec maximus lectus quis vehicula gravida. Proin odio nisi, aliquet ac ipsum quis, auctor semper leo. Curabitur vitae justo vel augue varius cursus non quis est. Nunc vulputate nunc nibh, sed tempus erat tincidunt eget. Duis a lacus at nulla porttitor tincidunt. Vestibulum euismod elementum mi ut tincidunt. Suspendisse tempus, mi et imperdiet maximus, est turpis placerat massa, at venenatis sem elit ut ex. Donec non aliquam odio. Curabitur ut leo vitae magna lobortis accumsan. Phasellus viverra eu leo non rhoncus.</p>
-              <p>Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id arcu tempus, varius erat et, ornare libero. In quis felis nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem mattis. Cras non varius dui, quis commodo ante. Maecenas gravida est non nulla malesuada egestas. Proin tincidunt eros et lacus sodales lobortis.</p>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
-            <div class="container-fluid">
-              <h2 class="mb-3 font-weight-bold">Product</h2>
-              <p>Sed auctor urna sit amet eros mattis interdum. Integer imperdiet ante in quam lacinia, a laoreet risus imperdiet. Ut a blandit elit, vitae volutpat nunc. Nam posuere urna sagittis lectus eleifend viverra. Quisque mauris nunc, viverra vitae sodales non, auctor in diam. Sed dignissim pulvinar sapien sed fermentum. Praesent interdum turpis ut neque tristique ornare. Nam dictum est sed sem elementum rutrum. Nam a mollis turpis.</p>
-              <p>Proin odio nisi, aliquet ac ipsum quis, auctor semper leo. Curabitur vitae justo vel augue varius cursus non quis est. Nunc vulputate nunc nibh, sed tempus erat tincidunt eget. Duis a lacus at nulla porttitor tincidunt. Vestibulum euismod elementum mi ut tincidunt. Suspendisse tempus, mi et imperdiet maximus, est turpis placerat massa, at venenatis sem elit ut ex. Donec non aliquam odio. Curabitur ut leo vitae magna lobortis accumsan. Phasellus viverra eu leo non rhoncus.</p>
-              <p>Pellentesque rutrum sit amet nunc sit amet faucibus. Ut id arcu tempus, varius erat et, ornare libero. In quis felis nunc. Aliquam euismod lacus a eros ornare, ut aliquam sem mattis. Cras non varius dui, quis commodo ante. Maecenas gravida est non nulla malesuada egestas.</p>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-news" role="tabpanel" aria-labelledby="pills-news-tab">
-            <div class="container-fluid">
-              <h2 class="mb-3 font-weight-bold">News</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor leo nec ligula viverra, quis facilisis nunc vehicula. Maecenas purus orci, efficitur in dapibus vel, rutrum in massa. Sed auctor urna sit amet eros mattis interdum. Integer imperdiet ante in quam lacinia, a laoreet risus imperdiet.</p>
-              <p>Proin maximus iaculis rhoncus. Morbi ante nibh, facilisis semper faucibus consequat, facilisis ut ante. Mauris at nisl vitae justo auctor imperdiet. Cras sodales, justo sed tincidunt venenatis, ante erat ultricies eros, at mollis eros lorem ac mi. Fusce sagittis nibh nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec mollis eros sodales convallis faucibus. Vestibulum sit amet odio lectus. Duis eu dolor vitae est venenatis viverra eu sit amet nisl. Aenean vel sagittis odio. Quisque in lacus orci. Etiam ut odio lobortis odio consectetur ornare.</p>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <div class="container-fluid">
-              <h2 class="mb-3 font-weight-bold">Contact</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porttitor leo nec ligula viverra, quis facilisis nunc vehicula. Maecenas purus orci, efficitur in dapibus vel, rutrum in massa. Sed auctor urna sit amet eros mattis interdum. Integer imperdiet ante in quam lacinia, a laoreet risus imperdiet.</p>
-              <p>Proin maximus iaculis rhoncus. Morbi ante nibh, facilisis semper faucibus consequat, facilisis ut ante. Mauris at nisl vitae justo auctor imperdiet. Cras sodales, justo sed tincidunt venenatis, ante erat ultricies eros, at mollis eros lorem ac mi. Fusce sagittis nibh nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec mollis eros sodales convallis faucibus. Vestibulum sit amet odio lectus. Duis eu dolor vitae est venenatis viverra eu sit amet nisl. Aenean vel sagittis odio. Quisque in lacus orci. Etiam ut odio lobortis odio consectetur ornare.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    
-    <h1>Hello, world!</h1>
+
+        <p>&#169; 2025 Copyright all rights reserved</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
 </body>
 </html>
