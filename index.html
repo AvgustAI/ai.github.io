@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="card.css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="background.css">
+
+
 </head>
 <body>
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+          <h1 class="main-title">Connect <span class="thin">Three</span></h1>
+
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
@@ -55,12 +63,15 @@
             <h2 class="section-title">About</h2>
 
             <div class="about-container bd-grid">
-                <div class="about-img">
-                    <img src="pl-avg.webp" alt="image">
+                <div id="app" class="container">
+                    <card data-image="pl-avg.webp">
+                      <h1 slot="header">Pavel Avgust</h1>
+                      <p slot="content">Developer</p>
+                    </card>
                 </div>
 
                 <div>
-                    <h2 class="about-subtitle">I'm Marlon</h2>
+                    <h2 class="about-subtitle">I'm Pavel Avgust</h2>
                     <p class="about-text">As a passionate web designer, I thrive on creating visually appealing and user-friendly websites. My journey in web design began with a fascination for how design can enhance user experience</p>
                 </div>
             </div>
@@ -213,7 +224,17 @@
         <p>&#169; 2025 Copyright all rights reserved</p>
     </footer>
 
+
+
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
+
+</div>
+<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>  
+<script src="background.js"></script>
+
 </body>
 </html>
