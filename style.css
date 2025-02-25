@@ -162,17 +162,19 @@ img {
 
     .home-social-icon:hover { color: var(--first-color); }
 
-.home-img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 295px;
-}
-
+    .home-img {
+        position: absolute; /* Изменяем на fixed вместо absolute */
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: var(--z-back);
+        opacity: 0; /* Начальное состояние для анимации */
+    animation: fadeIn 1s ease-in forwards; /* Проявление */
+    }
+    
     .home-img img {
-        width: 295px;
-        height: 295px;
-        border-radius: 50%;
+        width: 100%;
+        height: 100%;
     }
 
 .button {
@@ -320,7 +322,7 @@ img {
     }
 
     .home-social-icon { margin-bottom: 0; margin-right: var(--mb4); }
-    .home-img { width: 457px; height: 475px; bottom: 15%; }
+    .home-img { height: auto; bottom: 15%; }
 
     .about-container, .skills-container { 
         grid-template-columns: repeat(2, 1fr);
@@ -342,7 +344,7 @@ img {
 
 @media screen and (min-width: 1024px) {
     .bd-grid { margin-left: auto; margin-right: auto; }
-    .home-img { right: 10%; }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -360,3 +362,11 @@ img {
     .show { right: 0; }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

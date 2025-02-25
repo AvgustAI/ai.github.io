@@ -14,6 +14,11 @@
 
 </head>
 <body>
+
+    <div class="home-img">
+        <img src="linii.png" alt="image">
+    </div>
+
     <div id="large-header" class="large-header">
         <canvas id="demo-canvas"></canvas>
           <h1 class="main-title"> <span class="thin"></span></h1>
@@ -44,8 +49,8 @@
     <main class="l-main">
         <section class="home bd-grid" id="home">
             <div class="home-data">
-                <h1 class="home-title">Hi, <br>I'm <span class="home-title-color">Avgust</span><br> Web Designer</h1>
-                <a href="#" class="button">Contact</a>
+                <h1 class="home-title">Hi, <br>I'm <span class="home-title-color">Avgust</span><br>Chatbot-developer</h1>
+                <a href="https://avgust.zapier.app/" class="button">Contact</a>
             </div>
 
             <div class="home-social">
@@ -54,9 +59,7 @@
                 <a href="#" class="home-social-icon"><i class='bx bxl-github' ></i></a>
             </div>
 
-            <div class="home-img">
-                <img src="pl-avg.webp" alt="image">
-            </div>
+
         </section>
 
         <section class="about section" id="about">
@@ -69,10 +72,12 @@
                       <p slot="content">Developer</p>
                     </card>
                 </div>
-
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+                <script src="card.js"></script>
+                
                 <div>
                     <h2 class="about-subtitle">I'm Pavel Avgust</h2>
-                    <p class="about-text">As a passionate web designer, I thrive on creating visually appealing and user-friendly websites. My journey in web design began with a fascination for how design can enhance user experience</p>
+                    <p class="about-text">I specialize in AI-driven automation, chatbot development, and workflow optimization. By integrating smart AI solutions, I help businesses streamline operations and enhance customer interactions effortlessly.</p>
                 </div>
             </div>
         </section>
@@ -83,12 +88,12 @@
             <div class="skills-container bd-grid">
                 <div>
                     <h2 class="skills-subtitle">Professional Skills</h2>
-                    <p class="skills-text">I love to think outside the box and bring unique ideas to life through design, I have proficiency in HTML, CSS, and JavaScript, that ensure that my designs are not only beautiful but also functional. I prioritize the needs and preferences of users, conducting research to understand their behaviors and preferences.</p>
+                    <p class="skills-text">I build AI-powered solutions that don’t just work—they solve real business challenges. From chatbot development and API integrations to AI-generated content and dynamic web applications (React, JavaScript), I create seamless, automated experiences that drive results.</p>
 
                     <div class="skills-data">
                         <div class="skills-names">
                             <i class='bx bxl-html5 skills-icon' ></i>
-                            <span class="skills-name">HTML5</span>
+                            <span class="skills-name">Chatbot Development</span>
                         </div>
 
                         <div>
@@ -101,7 +106,7 @@
                     <div class="skills-data">
                         <div class="skills-names">
                             <i class='bx bxl-css3 skills-icon' ></i>
-                            <span class="skills-name">CSS3</span>
+                            <span class="skills-name">Automation & Workflow Optimization</span>
                         </div>
 
                         <div>
@@ -114,7 +119,7 @@
                     <div class="skills-data">
                         <div class="skills-names">
                             <i class='bx bxl-javascript skills-icon' ></i>
-                            <span class="skills-name">JAVASCRIPT</span>
+                            <span class="skills-name">AI & Content Generation (ChatGPT, Gemini, Copilot, Grok)</span>
                         </div>
 
                         <div>
@@ -127,7 +132,7 @@
                     <div class="skills-data">
                         <div class="skills-names">
                             <i class='bx bxs-paint skills-icon' ></i>
-                            <span class="skills-name">UX/UI</span>
+                            <span class="skills-name">Web Development for AI-Powered Solutions (HTML, CSS, JavaScript, React)</span>
                         </div>
 
                         <div>
@@ -147,28 +152,9 @@
         <section class="work section" id="work">
             <h2 class="section-title">Work</h2>
 
-            <h1 class="title">Hover over the cards</h1>
+            <h1 class="title">Hover over the cards</h1><br>
 
-            <div id="app" class="container">
-              <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Beaches</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Trees</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Lakes</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-            </div>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
-            <script src="card.js"></script>
+
             
             <div class="work-container bd-grid">
                 <div class="work-img">
@@ -204,7 +190,7 @@
                 <form action="" class="contact-form">
                     <input type="text" placeholder="Name" class="contact-input">
                     <input type="email" placeholder="Email" class="contact-input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
+                    <textarea name="" id="" cols="0" rows="10" class="contact-input" placeholder="Email"></textarea>
 
                     <input type="button" value="Send" class="contact-button button">
                 </form>

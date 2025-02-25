@@ -22,8 +22,8 @@
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width/40) {
-            for(var y = 0; y < height; y = y + height/40) {
+        for(var x = 0; x < width; x = x + width/30) {
+            for(var y = 0; y < height; y = y + height/30) {
                 var px = x + Math.random()*width/20;
                 var py = y + Math.random()*height/20;
                 var p = {x: px, originX: px, y: py, originY: py };
