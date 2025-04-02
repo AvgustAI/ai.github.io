@@ -1,3 +1,15 @@
+.l-main {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* Уменьшаем задержку */
+}
+
+.home-img {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; /* Оставляем чуть дольше */
+}
+
 /* Контейнер для анимации */
 .large-header {
   position: absolute;

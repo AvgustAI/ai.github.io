@@ -7,6 +7,25 @@
     initAnimation();
     addListeners();
 
+    document.addEventListener("DOMContentLoaded", () => {
+        const lMain = document.querySelector(".l-main");
+        const homeImg = document.querySelector(".home-img");
+    
+        if (lMain) {
+            setTimeout(() => {
+                lMain.style.visibility = "visible";
+                lMain.style.opacity = "1";
+            }, 100); // Почти мгновенное появление
+        }
+    
+        if (homeImg) {
+            setTimeout(() => {
+                homeImg.style.visibility = "visible";
+                homeImg.style.opacity = "1";
+            }, 200); // Немного позже
+        }
+    });
+    
     function initHeader() {
         width = window.innerWidth;
         height = document.documentElement.scrollHeight / 2; // Изменено: используем половину высоты документа

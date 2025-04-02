@@ -275,11 +275,11 @@ img {
 /*FOOTER*/
 
 .footer {
-    background-color: var(--second-color);
+  
     color: #ffffff;
     text-align: center;
     font-weight: var(--font-semi);
-    padding: 2rem 0;
+    
     position: absolute;
     width: 100%;
 }
