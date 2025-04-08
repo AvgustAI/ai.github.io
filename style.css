@@ -24,6 +24,8 @@
     --z-fixed: 100;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @media screen and (min-width: 768px) {
     :root {
         --big-font-size: 3.5rem;
@@ -130,7 +132,16 @@ img {
             background-color: var(--first-color);
         }
 
-.nav-logo { color: var(--second-color); }
+.nav-logo { color: var(--second-color); 
+        font-family: "Bonheur Royale", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-optical-sizing: auto;
+        font-size: 3cqw;
+  line-height: 1; /* Часто нужно для плотного прилегания */
+  white-space: nowrap; 
+      }
+
 .nav-toggle {
     color: var(--second-color);
     font-size: 1.5rem;
