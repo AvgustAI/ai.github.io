@@ -380,8 +380,6 @@ div.tp-dfwv {
     rgba(0, 0, 0, 0.6) 75%, /* Начинаем затемнение ближе к середине */
     rgba(0, 0, 0, 1) 100% /* Максимальное затемнение снизу */
   );
-  background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   mix-blend-mode: multiply; /* Затемнение только текста */
   opacity: 0.9; /* Интенсивность */
