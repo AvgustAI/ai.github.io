@@ -287,11 +287,6 @@
     font-size: var(--fluid-type);
   }
 
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
 
   .scroll-effect-bear-link {
     color: canvasText;
@@ -329,4 +324,65 @@
 
 div.tp-dfwv {
   position: fixed;
+}
+/* Стили для "Avgust AI" с металлическим радужным градиентом */
+.brand-gradient {
+  
+  /* Радужный градиент по диагонали */
+  background: linear-gradient(
+    135deg,
+    #ff4040, /* Приглушенный красный */
+    #ff8c40, /* Приглушенный оранжевый */
+    #ffd700, /* Золотисто-желтый */
+    #32cd32, /* Приглушенный зеленый */
+    #40c4ff, /* Приглушенный голубой */
+    #1e90ff, /* Приглушенный синий */
+    #4b0082  /* Темный индиго */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  /* Облегченная тень для сглаживания резкости */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.15); /* Один слой с меньшим радиусом и интенсивностью */
+}
+
+/* Псевдоэлемент для металлического эффекта и усиленного осветления сверху */
+.brand-gradient::before {
+  content: "Avgust AI"; /* Повторяем текст */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%, /* Максимальное осветление сверху */
+    rgba(255, 255, 255, 0.3) 50%, /* Мягкий переход */
+    transparent 100% /* Прозрачно снизу */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  mix-blend-mode: screen; /* Осветление только текста */
+  opacity: 0.8; /* Интенсивность */
+}
+
+/* Псевдоэлемент для усиленного затемнения снизу до середины текста */
+.brand-gradient::after {
+  content: "Avgust AI"; /* Повторяем текст */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%, /* Прозрачно сверху */
+    transparent 50%, /* Прозрачно до середины */
+    rgba(0, 0, 0, 0.6) 75%, /* Начинаем затемнение ближе к середине */
+    rgba(0, 0, 0, 1) 100% /* Максимальное затемнение снизу */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  mix-blend-mode: multiply; /* Затемнение только текста */
+  opacity: 0.9; /* Интенсивность */
 }

@@ -49,5 +49,6 @@ sr.reveal('.skills-data', {interval: 200} )
 sr.reveal('.skills-img', {delay: 400} )
 
 sr.reveal('.work-img', {interval: 200} )
+sr.reveal('.content2', {interval: 200} )
 
-sr.reveal('.contact-input', {interval: 200} )
+sr.reveal('.faq-container', {interval: 200} )

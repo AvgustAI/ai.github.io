@@ -50,6 +50,11 @@ body {
 
 h1, h2, p { margin: 0; }
 
+.con-cards .card2 .con-text p {
+    padding: 5px 0;
+}
+
+
 ul {
     margin: 0;
     padding: 0;
